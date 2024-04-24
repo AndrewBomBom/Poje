@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, abort
-from Forms_py.RegForm import RegForm
+from forms.RegForm import RegForm
+from data import db_session
 
 
 
@@ -15,8 +16,6 @@ def index():
 @app.route('/register', methods = ['GET','POST'])
 def register():
     form = RegForm()
-    print(form.errors)
-    print(form.name.data)
     if form.validate_on_submit():
         return redirect('/index')
         
@@ -24,6 +23,7 @@ def register():
 
 
 def main():
+    db_session.global_init('Flask/db/DataBase.db')
     app.run(debug=True)
     
 

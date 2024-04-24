@@ -2,16 +2,36 @@
 
 {% block content %}
 <div>
-    <form action="" method="get">
+    <form action="" method="post">
         {{ form.csrf_token }}
         <div>
             {{ form.name.label }}
-            {{ form.name }}
-            {% for error in form.name.errors %}
-            <div>
-                {{ error }}
-            </div>
-            {% endfor %}
+            {{ form.name(class='form-control', type='text') }}
+            
+        </div>
+        <div>
+            {{ form.lastname.label }}
+            {{ form.lastname(class="form-control", type='text')}}
+        </div>
+        <div>
+            {{ form.group_num.label }}
+            {{ form.group_num(class="form-control", type='text')}}
+        </div>
+        <div>
+            {{ form.podgroup_num.label }}
+            {{ form.podgroup_num(class="form-control", type='text')}}
+        </div>
+        <div>
+            {{ form.Starosta.label }}
+            {{ form.Starosta }}
+        </div>
+        <div>
+            {{ form.password.label }}
+            {{ form.password(class="form-control", type='password')}}
+        </div>
+        <div>
+            {{ form.password_rep.label }}
+            {{ form.password_rep(class="form-control", type='password')}}
         </div>
         <div>
         {{ form.submit(type='submit') }}
