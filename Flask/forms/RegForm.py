@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,BooleanField,SubmitField
+from wtforms import StringField,PasswordField,BooleanField,SubmitField, EmailField
 from wtforms.validators import DataRequired
 
 
 class RegForm(FlaskForm):
+    email = EmailField('Почта', validators=[DataRequired()])
     name = StringField('Имя',validators=[DataRequired()])
     lastname = StringField('Фамилия', validators=[DataRequired()])
     group_num = StringField('Номер группы', validators=[DataRequired()])
@@ -11,4 +12,4 @@ class RegForm(FlaskForm):
     Starosta = BooleanField('Вы староста этой группы?')
     password = PasswordField('Пароль')
     password_rep = PasswordField('Повторите пароль',validators=[DataRequired()])
-    submit = SubmitField('Зарегестрироваться')
+    submit = SubmitField('Кастрюлироваться')

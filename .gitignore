@@ -2634,3 +2634,5 @@
 .venv/Lib/site-packages/typing_extensions-4.11.0.dist-info/METADATA
 .venv/Lib/site-packages/typing_extensions-4.11.0.dist-info/RECORD
 .venv/Lib/site-packages/typing_extensions-4.11.0.dist-info/WHEEL
+Flask/db/DataBase.db
+Flask/db/DataBase.db

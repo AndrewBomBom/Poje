@@ -1,13 +1,14 @@
-.mainword{
+.mainword{ 
+    /* display: flex; 
+    flex-flow: row wrap;    */
     color: red;
     margin: 0px;
     font-family: monospace;
     font-size: 30px;
     border-right:aqua;
-    border:10px
+    border:10px;
+    text-align: center;
+    
     
 }
 
-.body{
-    text-align:center
-}

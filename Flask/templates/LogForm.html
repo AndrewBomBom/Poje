@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.email.label }}
+            {{ form.email(class='form-control' , type='email')}}
+        </div>
+        <div>
+            {{ form.password.label }}
+            {{ form.password(class='form-control' , type='password')}}
+            <div>
+                {% for error in form.password.errors %}
+                    {{error}}
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            {{ form.submit( type='submit') }}
+        </div>
+
+    </form>
+</div>
+{% endblock %}
