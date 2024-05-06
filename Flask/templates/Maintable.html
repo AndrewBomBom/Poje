@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    {% for single_date in dates %}
+    <div class="dates">
+        <td>
+            <tr>
+            {{ single_date }}
+            </tr>
+        </td>
+    </div>
+    {% endfor %}
+</div>
+    
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.type_event.label }}
+            {{ form.type_event(class='form-control')}}
+        </div>
+        <div>
+            {{ form.day_event.label }}
+            {{ form.day_event(class='form-control')}}
+        </div>
+        <div>
+            {{ form.time_event.label }}
+            {{ form.time_event(class='form-control')}}
+        </div>
+        <div>
+            {{ form.content.label }}
+            {{ form.content(class='form-control')}}
+        </div>
+        <div>
+            {{ form.submit( type='submit') }}
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

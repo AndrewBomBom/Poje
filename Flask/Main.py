@@ -1,11 +1,14 @@
 from flask import Flask, render_template, redirect, abort
 from data import db_session
+import datetime
 from flask_login import LoginManager, login_user, current_user, login_required, logout_user
 
 from forms.RegForm import RegForm
 from forms.LogForm import LogForm
+from forms.AddEventForm import add_eventForm
 
 from data.user_model import User
+from data.event_model import Event
 
 
 
@@ -30,6 +33,38 @@ def logout():
 @app.route('/index')
 def index():
     return render_template('base.html')
+
+@app.route('/event_table')
+def event_table():
+    db_sess = db_session.create_session()
+    today_day = datetime.datetime.now().date()
+    # today_day = datetime.datetime.strftime(today_day,'%d.%m.%Y')
+    dates = []
+    for single_date in (today_day + datetime.timedelta(n) for n in range(4)):
+        dates.append(single_date)
+    return render_template('Maintable.html', dates = dates)
+    
+
+
+
+@app.route('/add_event', methods = ['GET', 'POST'])
+def add_event():
+    form = add_eventForm()
+    if form.validate_on_submit():
+        event = Event(
+            type_event = form.type_event.data,
+            day_event = form.day_event.data,
+            time_event = form.time_event.data,
+            content = form.content.data,
+            writer_id = current_user.get_id()
+        )
+
+        db_sess = db_session.create_session()
+        db_sess.add(event)
+        db_sess.commit()
+        db_sess.close()
+        return redirect('/index')
+    return render_template('AddEvent.html', title = 'Добавления события', form = form)      
 
 @app.route('/register', methods = ['GET','POST'])
 def register():
@@ -59,11 +94,11 @@ def register():
 @app.route('/login', methods = ['GET','POST'])
 def login():
     form = LogForm()
-    print(form.validate_on_submit())
     if form.validate_on_submit():
         db_sess = db_session.create_session()
         user = db_sess.query(User).filter(User.email == form.email.data).first()
         if user and user.check_password(form.password.data):
+            login_user(user)
             return redirect('/index')
     return render_template('LogForm.html', title='Вход', form = form)
     
