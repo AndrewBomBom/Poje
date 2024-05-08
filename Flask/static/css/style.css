@@ -12,4 +12,17 @@
     
 }
 
+.dates{
+    margin: 1%;
+    display: flex; 
+    flex-flow: row wrap;   
+}
+
+.single_date{
+    margin: 0%;
+    padding: 10px;
+    border: solid #000;
+    
+}
+
 

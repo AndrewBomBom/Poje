@@ -10,8 +10,9 @@ class Event(SqlAlchemyBase, SerializerMixin):
 
     id_event = sqlalchemy.Column(sqlalchemy.INTEGER, primary_key = True, autoincrement = True)
     type_event = sqlalchemy.Column(sqlalchemy.Integer)
-    day_event = sqlalchemy.Column(sqlalchemy.DateTime)
+    day_event = sqlalchemy.Column(sqlalchemy.Date)
     time_event = sqlalchemy.Column(sqlalchemy.Time, nullable=True)
     content = sqlalchemy.Column(sqlalchemy.String)
     writer_id = sqlalchemy.Column(sqlalchemy.INTEGER)
     
+

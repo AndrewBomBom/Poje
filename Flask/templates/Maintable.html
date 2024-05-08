@@ -2,15 +2,21 @@
 
 {% block content %}
 <div>
-    {% for single_date in dates %}
     <div class="dates">
-        <td>
-            <tr>
-            {{ single_date }}
-            </tr>
-        </td>
+        {% for single_date in dates %}
+        <div class="single_date">
+            {{ single_date }} 
+                {% for date, events in events_today %}
+                    
+                    <div>
+                        {{ events_today.get(date) }}
+                    </div>
+                    
+                {% endfor %}
+            
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
     
 
