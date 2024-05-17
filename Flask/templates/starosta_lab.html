@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="POST">
+    {{ form.csrf_token }}
+    {% for user in This_group_users %}
+        <div>
+            {{ user.name }}
+        </div>
+        <div>
+            {{ user.lastname }}
+        </div>
+        <div>
+            {{ form.confirm_user.label }}
+            <input type="checkbox" name = 'checkbox' value="{{ user.id }}">
+        </div>
+        <div>
+        </div>
+    {% endfor %}
+    {{ form.submit(type='submit') }}
+</form>
+
+{% endblock %}

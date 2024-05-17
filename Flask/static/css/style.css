@@ -8,8 +8,6 @@
     border-right:aqua;
     border:10px;
     text-align: center;
-    
-    
 }
 
 .dates{
@@ -25,4 +23,6 @@
     
 }
 
-
+body{
+    text-align: center;
+}

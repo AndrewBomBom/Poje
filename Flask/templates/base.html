@@ -11,14 +11,16 @@
     <div class='mainword'>
                 <div class="text">Задумайся, приколы не вечны</div>
                 {% if current_user.is_authenticated %}
-                <a class="btn btn-sm btn-outline-secondary" href="/logout">{{ current_user.name }}</a>
-                <a class="btn btn-sm btn-outline-secondary" href="/add_event">Add event</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/logout">{{ current_user.name }}</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/add_event">Add event</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/event_table">События</a>
+                    {% if current_user.Starosta == 1 %}
+                    <a class="btn btn-sm btn-outline-secondary" href="/starosta_lab">Кабинет старосты</a>
+                    {% endif %}
                 {% else %}
-                <a class="btn btn-sm btn-outline-secondary" href="/register">Register</a>
-                <a class="btn btn-sm btn-outline-secondary" href="/login">Sign up</a>
-            
+                    <a class="btn btn-sm btn-outline-secondary" href="/register">Register</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/login">Sign up</a>
                 {% endif %}
-            
     </div>
     
     {% block content %}

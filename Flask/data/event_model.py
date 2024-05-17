@@ -13,6 +13,6 @@ class Event(SqlAlchemyBase, SerializerMixin):
     day_event = sqlalchemy.Column(sqlalchemy.Date)
     time_event = sqlalchemy.Column(sqlalchemy.Time, nullable=True)
     content = sqlalchemy.Column(sqlalchemy.String)
-    writer_id = sqlalchemy.Column(sqlalchemy.INTEGER)
+    writer_group = sqlalchemy.Column(sqlalchemy.INTEGER)
     
 

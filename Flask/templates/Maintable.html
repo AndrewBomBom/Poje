@@ -6,17 +6,18 @@
         {% for single_date in dates %}
         <div class="single_date">
             {{ single_date }} 
-                {% for date, events in events_today %}
-                    
+                {% for date, events in events_today.items() %}
+                    {% if date == single_date %}
                     <div>
                         {{ events_today.get(date) }}
                     </div>
-                    
+                    {% endif %}
                 {% endfor %}
             
         </div>
         {% endfor %}
     </div>
+    <a class="btn btn-sm btn-outline-secondary" href="/delete_event">Удалить событие</a>
 </div>
     
 
