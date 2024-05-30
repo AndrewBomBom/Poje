@@ -181,3 +181,13 @@ body{
     color: #fff;
 }
 
+.knopochki{
+    background-color: transparent;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff0000;
+
+}
