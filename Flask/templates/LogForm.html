@@ -1,25 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
+<div class="login">
     <form action="" method="post">
         {{ form.csrf_token }}
-        <div>
-            {{ form.email.label }}
-            {{ form.email(class='form-control' , type='email')}}
+        <h1>Авторизуйтесь</h1>
+        <div class="email">
+             <!-- {{ form.email.label }} -->
+            {{ form.email(class='form-control', placeholder='Почта')}}<br/>
+            <!-- <i class='bx bx-mail-send' ></i> -->
         </div>
-        <div>
-            {{ form.password.label }}
-            {{ form.password(class='form-control' , type='password')}}
+        <div class="password">
+            <!-- {{ form.password.label }}<br/> -->
+            {{ form.password(class='form-control', placeholder='Пароль')}}
+            <!-- <div class="remember">
+                <input id="remember", type="checkbox"> <label for="remember" id="remember"> Запомнить меня </label><a href="#">Забыл пароль?</a><br/>
+            </div> -->
             <div>
                 {% for error in form.password.errors %}
                     {{error}}
                 {% endfor %}
             </div>
         </div>
-        <div>
-            {{ form.submit( type='submit') }}
+        <div class="knopkaepta">
+            </br><br/>{{ form.submit(class='knopkaepta', type='submit') }}
+            <!-- <i class='bx bxs-door-open' ></i> -->
         </div>
+        
 
     </form>
 </div>

@@ -1,12 +1,126 @@
-.mainword{ 
-    /* display: flex; 
-    flex-flow: row wrap;    */
-    color: red;
-    margin: 0px;
-    font-family: monospace;
-    font-size: 30px;
-    border-right:aqua;
-    border:10px;
+
+.body{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(216, 58, 255); */
+    background-image: url(back.jpg);
+    background-size: 100%;
+    /* background-image: linear-gradient(75deg, rgb(69, 0, 179), rgb(253, 96, 253), transparent);*/
+    /* background-size: cover; */
+    /* background-position: center;  */
+}
+
+.mainword{
+    position: absolute;
+    top: 20%;
+    left: 11%;
+    transform: translate(-50%, -50%); 
+    padding-bottom: 15%; 
+    display: flex;
+    justify-content: center; 
+    flex-flow: row wrap;   
+    color: rgb(0, 0, 0);
+    margin-top: 3%;
+    margin-left: 39%;
+    
+    box-sizing: border-box;
+    background-color: none;
+    font-size: 23px;
+    /* border-right:aqua;
+    border:2px solid rgb(255, 255, 255, .5);
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur(1000px);
+    box-shadow: 0 0 10px rgba(0,0,0, .3); */
+    text-align: center;
+    width: 420px;
+    align-items: center;
+    
+}
+
+.mainword .text{
+    color: #ff0000;
+    font-size: 46px;
+}
+
+.mainword .knopochki{
+    width: 720px;
+    background-color: transparent;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: none;
+    border-radius: 15px;
+    border:2px solid rgb(255, 255, 255, .6);
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 100px rgba(0,0,0, .3);
+    padding: 10px 20px;
+    color:#fff;
+    text-align: center;
+}
+
+.login .email{
+    width: 100%;
+    height: 45px;
+    /* background-color: blueviolet; */
+    margin: 30px 0;
+}
+
+.login .password{
+    width: 100%;
+    height: 45px;
+    /* background-color: blueviolet; */
+    margin: 30px 0;
+}
+
+.mainword a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mainword a:hover{
+    text-decoration: none;
+    color: violet;
+}
+
+.login .form-control{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 18px;
+    color: #fff;
+    
+}
+
+.login .form-control::placeholder{
+    color: #fff;
+}
+
+.register_{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color:none;
+    color:rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -26,3 +140,44 @@
 body{
     text-align: center;
 }
+
+.login .remember{
+    display: flex;
+    justify-content:space-evenly;
+     font-size: 14.5px;
+     font-weight: 600;
+     color: #fff;
+}
+
+/* .login .remember .checkbox{
+    color: #fff;
+} */
+
+/* .remember a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.remember a:hover{
+    text-decoration: none;
+    color: violet;
+}
+
+.remember :hover{
+    text-decoration: none;
+    font-weight: 600;
+    color: violet;
+} */
+
+.login .knopkaepta{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
