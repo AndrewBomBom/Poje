@@ -2718,3 +2718,11 @@ Flask/forms/__pycache__/AddEventForm.cpython-311.pyc
 Flask/forms/__pycache__/ConfirmUser.cpython-311.pyc
 Flask/forms/__pycache__/LogForm.cpython-311.pyc
 Flask/forms/__pycache__/RegForm.cpython-311.pyc
+Flask/data/__pycache__/__all_models.cpython-311.pyc
+Flask/data/__pycache__/db_session.cpython-311.pyc
+Flask/data/__pycache__/event_model.cpython-311.pyc
+Flask/data/__pycache__/user_model.cpython-311.pyc
+Flask/forms/__pycache__/AddEventForm.cpython-311.pyc
+Flask/forms/__pycache__/ConfirmUser.cpython-311.pyc
+Flask/forms/__pycache__/LogForm.cpython-311.pyc
+Flask/forms/__pycache__/RegForm.cpython-311.pyc
