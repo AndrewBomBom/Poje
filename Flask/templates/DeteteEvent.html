@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ form.csrf_token }}
+    <form action="" method="post">
+        {% if data %}
+            жопа
+        {% else %}
+            {{ form.search_date.label }}
+            {{ form.search_date(class="form-control") }}
+
+            {{ form.submit(class="form-control") }}
+        {% endif %}
+    </form>
+{% endblock %}

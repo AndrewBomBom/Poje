@@ -12,6 +12,7 @@ from flask import g
 
 from forms.RegForm import RegForm
 from forms.LogForm import LogForm
+from forms.DeleteForm import Detele_event
 from forms.AddEventForm import add_eventForm
 from forms.ConfirmUser import ConfirmUser
 
@@ -72,7 +73,9 @@ def starosta_lab():
 @app.route('/delete_event', methods=['GET', 'POST'])
 @login_required
 def detele_event():
+    form = Detele_event()
     db_sess = db_session.create_session()
+    return render_template("DeteteEvent.html", form = form)
     
 
 
@@ -86,7 +89,7 @@ def event_table():
     dates = []
     dict_events_today = {}
     for single_date in (today_day + timedelta(n) for n in range(7)):
-        dates.append(str(single_date))
+        dates.append(str(single_date.strftime("%d/%m/%y")))
         user_group = str(db_sess.query(User.group_num).filter(User.id == current_user.get_id()).first())
         user_group = int( re.sub("[^A-Za-z0-9а-яА-Я ]", "", user_group))
         events_today = str(db_sess.query(Event.content).filter(Event.day_event == single_date, Event.writer_group == user_group).all())
