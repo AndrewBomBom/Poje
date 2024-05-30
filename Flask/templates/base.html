@@ -20,18 +20,19 @@
     </style> -->
     <div class='mainword'>
                 <div class="text">ST home</div>
-                <div class=knopochki>
+                <div class="knopochki">
                 
                 {% if current_user.is_authenticated %}
-                    <a class="btn btn-sm btn-outline-secondary" href="/logout">{{ current_user.name }}</a>
+                    <a class="btnkabik" href="/starosta_lab">Кабинет старосты</a>
                     <box-icon name='user-check' ></box-icon>
-                    <a class="btn btn-sm btn-outline-secondary" href="/add_event">Add event</a>
-                    <a class="btn btn-sm btn-outline-secondary" href="/event_table">События</a>
+                    <a class="btnsob" href="/event_table">События</a>
+                    <a class="btneve" href="/add_event">Добавить событие</a>
                     {% if current_user.Starosta == 1 %}
-                    <a class="btn btn-sm btn-outline-secondary" href="/starosta_lab">Кабинет старосты</a>
+                    <a class="btnexit" href="/logout">Выход</a>
                     {% endif %}
                 {% else %}
-                    <a class="btnsign up" href="/login">Войти <i class='bx bx-lock-open-alt' ></i></a> <a class="btn_register" href="/register">Зарегестрироваться <i class='bx bx-edit' ></i></a> 
+                </div>
+                <div><a class="btnsign up" href="/login">Войти <i class='bx bx-lock-open-alt' ></i></a> <a class="btn_register" href="/register">Зарегестрироваться <i class='bx bx-edit' ></i></a></div> 
                     
                 {% endif %}
                 </div>

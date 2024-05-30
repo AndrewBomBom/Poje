@@ -12,4 +12,4 @@ class RegForm(FlaskForm):
     Starosta = BooleanField('Вы староста этой группы?')
     password = PasswordField('Пароль')
     password_rep = PasswordField('Повторите пароль',validators=[DataRequired()])
-    submit = SubmitField('Кастрюлироваться')
+    submit = SubmitField('Зарегестрироваться')

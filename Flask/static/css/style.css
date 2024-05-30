@@ -5,9 +5,7 @@
     /* background-color: rgb(216, 58, 255); */
     background-image: url(back.jpg);
     background-size: 100%;
-    /* background-image: linear-gradient(75deg, rgb(69, 0, 179), rgb(253, 96, 253), transparent);*/
-    /* background-size: cover; */
-    /* background-position: center;  */
+
 }
 
 
@@ -27,12 +25,6 @@
     box-sizing: border-box;
     background-color: none;
     font-size: 23px;
-    /* border-right:aqua;
-    border:2px solid rgb(255, 255, 255, .5);
-    border-radius: 30px;
-    background: transparent;
-    backdrop-filter: blur(1000px);
-    box-shadow: 0 0 10px rgba(0,0,0, .3); */
     text-align: center;
     width: 420px;
     align-items: center;
@@ -42,17 +34,6 @@
 .mainword .text{
     color: #ff0000;
     font-size: 46px;
-}
-
-.mainword .knopochki{
-    width: 720px;
-    background-color: transparent;
-    border-radius: 30px;
-    border-width: 3px;
-    border-color: white;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
 }
 
 .login{
@@ -76,14 +57,12 @@
 .login .email{
     width: 100%;
     height: 45px;
-    /* background-color: blueviolet; */
     margin: 30px 0;
 }
 
 .login .password{
     width: 100%;
     height: 45px;
-    /* background-color: blueviolet; */
     margin: 30px 0;
 }
 
@@ -150,29 +129,6 @@ body{
      color: #fff;
 }
 
-/* .login .remember .checkbox{
-    color: #fff;
-} */
-
-/* .remember a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.remember a:hover{
-    text-decoration: none;
-    color: violet;
-}
-
-.remember :hover{
-    text-decoration: none;
-    font-weight: 600;
-    color: violet;
-} */
-
-
-
 .login .knopka{
     width: 100%;
     background-color: transparent;
@@ -184,13 +140,178 @@ body{
     color: #fff;
 }
 
-.knopochki{
+.register_{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: none;
+    border-radius: 15px;
+    border:2px solid rgb(255, 255, 255, .6);
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 100px rgba(0,0,0, .3);
+    padding: 10px 20px;
+    color:#fff;
+    text-align: center;
+}
+
+.register_ .form-control{
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border-radius: 30px;
     border-width: 3px;
-    border-color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    color: #ff0000;
+    border-color: white;
+    font-size: 18px;
+    color: #fff;
+    
+}
 
+.register_ .form-control::placeholder{
+    color: #fff;
+
+}
+
+.register_ .memail{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 20px 0;
+}
+
+.register_ .name_{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 20px 0;
+}
+
+.register_ .lastname_{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 20px 0;
+}
+
+.register_ .numgroup_{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 20px 0;
+}
+
+.register_ .numpodgroup_{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 10px 0;
+}
+
+.register_ .pass_{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 10px 0;
+}
+
+.register_ .passs_{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin: 20px 0;
+}
+
+/* .register_ .form-control{
+    cursor: pointer;
+} */
+
+.register_ .regkas{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.mainword .knopochki{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    
+}
+
+.mainword .knopochki .btnkabik{
+    font-size: 18px;
+    color: none;
+    margin: 10px;
+}
+.mainword .knopochki .btnkabik:hover{
+    text-decoration:overline;
+}
+
+
+
+.mainword .knopochki .btnsob{
+    font-size: 18px;
+    color: none;
+    margin: 10px;
+}
+.mainword .knopochki .btnsob:hover{
+    text-decoration:overline;
+}
+
+
+
+.mainword .knopochki .btneve{
+    font-size: 18px;
+    color: none;
+    margin: 10px;
+}
+.mainword .knopochki .btneve:hover{
+    text-decoration:overline;
+}
+
+
+
+.mainword .knopochki .btnexit{
+    font-size: 18px;
+    color: none;
+    margin: 10px;
+}
+.mainword .knopochki .btnexit:hover{
+    text-decoration:overline;
+}
+
+.events_{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 820px;
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.events_ .knop__{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    
 }

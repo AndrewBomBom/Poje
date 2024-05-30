@@ -4,10 +4,10 @@
 <div class="register_">
     <form action="" method="post" id="confirmed" name="confirmed">
         {{ form.csrf_token }}
-        <h1>Добро пожаловать!</h1><br/>
-        <div>
+        <h1>Добро пожаловать!</h1>
+        <div class="memail">
             <!-- {{ form.email.label }}<i class='bx bx-mail-send'></i> -->
-            {{ form.email(class='form-control', placeholder='Почта') }}<br/>
+            {{ form.email(class='form-control', placeholder='Почта') }}
 
             {% for error in form.email.errors %}
             <div>
@@ -15,9 +15,9 @@
             </div>
             {% endfor %}
         </div>
-        <div>
+        <div class="name_">
             <!-- {{ form.name.label }}<i class='bx bx-user' ></i>  -->
-            {{ form.name(class='form-control', placeholder='Имя') }}<br/>
+            {{ form.name(class='form-control', placeholder='Имя') }}
 
             {% for error in form.name.errors %}
             <div>
@@ -26,9 +26,9 @@
             {% endfor %}
             
         </div>
-        <div>
+        <div class="lastname_">
             <!-- {{ form.lastname.label }}<i class='bx bx-user' ></i> -->
-            {{ form.lastname(class="form-control", placeholder='Фамилия')}}<br/>
+            {{ form.lastname(class="form-control", placeholder='Фамилия')}}
 
             {% for error in form.lastname.errors %}
             <div>
@@ -39,7 +39,7 @@
             {% endfor %}
 
         </div>
-        <div>
+        <div class="numgroup_">
             <!-- {{ form.group_num.label }}<i class='bx bx-briefcase-alt-2'></i> -->
             {{ form.group_num(class="form-control", placeholder='Номер группы')}}<br/>
 
@@ -49,7 +49,7 @@
             </div>
             {% endfor %}
         </div>
-        <div>
+        <div class="numpodgroup_">
             <!-- {{ form.podgroup_num.label }}<i class='bx bxs-briefcase-alt-2'></i> -->
             {{ form.podgroup_num(class="form-control", placeholder='Номер подгруппы')}}
 
@@ -59,15 +59,15 @@
             </div>
             {% endfor %}
         </div>
-        <div>
+        <div class="staros">
             {{ form.Starosta.label }}
             {{ form.Starosta }}
         </div>
-        <div>
+        <div class="pass_">
             <!-- {{ form.password.label }}<i class='bx bx-lock-open-alt'></i> -->
             {{ form.password(class="form-control", placeholder='Пароль')}}<br/>
         </div>
-        <div>
+        <div class="passs_">
             <!-- {{ form.password_rep.label }}<i class='bx bxs-lock-open-alt' ></i> -->
             {{ form.password_rep(class="form-control", placeholder='Подтвердите пароль')}}<br/>
 
@@ -81,7 +81,8 @@
             {{ message }}
         </div>
         <div>
-        </br>{{ form.submit(type='submit') }} <i class='bx bxs-rocket'></i>
+        </br>{{ form.submit(class='regkas', type='submit') }} 
+        <!-- <i class='bx bxs-rocket'></i> -->
         </div>
     </form>
 </div>
