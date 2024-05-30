@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
+<div class="events_">
     <form action="" method="post">
         {{ form.csrf_token }}
         <div>
@@ -18,10 +18,10 @@
         </div>
         <div>
             {{ form.content.label }}
-            {{ form.content(class='form-control')}}
+            {{ form.content(class='form-control')}}<br/><br/>
         </div>
-        <div>
-            {{ form.submit( type='submit') }}
+        <div class="knop__">
+            {{ form.submit(class='knop__', type='submit') }}
         </div>
     </form>
 </div>
