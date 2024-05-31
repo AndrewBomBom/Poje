@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form class="knip" action="" method="POST">
+<form class="starlab" action="" method="POST">
     {{ form.csrf_token }}
     {% for user in This_group_users %}
         <div>
@@ -13,12 +13,11 @@
         <div>
             {{ form.confirm_user.label }}
             <input type="checkbox" name = 'checkbox' value="{{ user.id }}">
-            <!-- <input id="remember", type="checkbox"> <label for="remember" id="remember"> Запомнить меня </label> -->
         </div>
         <div>
         </div>
     {% endfor %}
-    {{ form.submit(type='submit') }}
+    {{ form.submit(class="constar", type='submit') }}
 </form>
 
 {% endblock %}

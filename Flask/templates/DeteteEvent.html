@@ -2,14 +2,14 @@
 
 {% block content %}
     {{ form.csrf_token }}
-    <form action="" method="post">
+    <form class="delev" caction="" method="post">
         {% if data %}
             жопа
         {% else %}
             {{ form.search_date.label }}
-            {{ form.search_date(class="form-control") }}
+            {{ form.search_date(class="form-control") }}<br/>
 
-            {{ form.submit(class="form-control") }}
+            {{ form.submit(class="form-control", type='submit') }}
         {% endif %}
     </form>
     

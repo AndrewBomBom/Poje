@@ -23,15 +23,13 @@
                 <div class="knopochki">
                 
                 {% if current_user.is_authenticated %}
-                    
-                    <box-icon name='user-check' ></box-icon>
-                    <a class="btnsob" href="/event_table">События</a>
-                    <a class="btneve" href="/add_event">Добавить событие</a>
                     {% if current_user.Starosta == 1 %}
                     <a class="btnkabik" href="/starosta_lab">Кабинет старосты</a>
                     {% endif %}
+                    <box-icon name='user-check' ></box-icon>
+                    <a class="btnsob" href="/event_table">События</a>
+                    <a class="btneve" href="/add_event">Добавить событие</a>
                     <a class="btnexit" href="/logout">Выход</a>
-
                 {% else %}
                 </div>
                 <div><a class="btnsign up" href="/login">Войти <i class='bx bx-lock-open-alt' ></i></a> <a class="btn_register" href="/register">Зарегестрироваться <i class='bx bx-edit' ></i></a></div> 
@@ -39,12 +37,13 @@
                 {% endif %}
                 </div>
     </div>
-    
+    <div class="ebanayaknopka">
     {% block content %}
 
     
 
     {% endblock %}
+    </div>
 
 </body>
 
