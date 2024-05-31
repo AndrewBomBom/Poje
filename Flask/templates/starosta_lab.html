@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="" method="POST">
+<form class="knip" action="" method="POST">
     {{ form.csrf_token }}
     {% for user in This_group_users %}
         <div>

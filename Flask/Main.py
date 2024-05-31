@@ -98,7 +98,7 @@ def event_table():
         user_group = int( re.sub("[^A-Za-z0-9а-яА-Я ]", "", user_group))
         events_today = str(db_sess.query(Event.content).filter(Event.day_event == single_date, Event.writer_group == user_group).all())
         events_today = re.sub("[^A-Za-z0-9а-яА-Я ]", "", events_today)
-        dict_events_today[str(single_date)] = str(events_today) 
+        dict_events_today[str(single_date.strftime("%d/%m/%y"))] = str(events_today) 
     return render_template('Maintable.html', dates = dates, events_today = dict_events_today)
     
     
