@@ -75,6 +75,10 @@ def starosta_lab():
 def detele_event():
     form = Detele_event()
     db_sess = db_session.create_session()
+    if form.search_date.date:
+        ness_date = db_sess.query(Event.content).filter(Event.day_event == form.search_date.date).all()
+
+
     return render_template("DeteteEvent.html", form = form)
     
 
