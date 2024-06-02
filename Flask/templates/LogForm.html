@@ -6,16 +6,10 @@
         {{ form.csrf_token }}
         <h1>Авторизуйтесь</h1>
         <div class="email">
-             <!-- {{ form.email.label }} -->
             {{ form.email(class='form-control', placeholder='Почта')}}<br/>
-            <!-- <i class='bx bx-mail-send' ></i> -->
         </div>
         <div class="password">
-            <!-- {{ form.password.label }}<br/> -->
             {{ form.password(class='form-control', placeholder='Пароль')}}
-            <!-- <div class="remember">
-                <input id="remember", type="checkbox"> <label for="remember" id="remember"> Запомнить меня </label><a href="#">Забыл пароль?</a><br/>
-            </div> -->
             <div>
                 {% for error in form.password.errors %}
                     {{error}}
@@ -24,7 +18,6 @@
         </div>
         <div class="knopka">
             </br><br/>{{ form.submit(class='knopka', type='submit') }}
-            <!-- <i class='bx bxs-door-open' ></i> -->
         </div>
         
 

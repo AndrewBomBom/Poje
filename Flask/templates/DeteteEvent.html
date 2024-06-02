@@ -4,7 +4,7 @@
     <form class="delev" action="" method="post">
         {{ form.csrf_token }}
         {% if message: %}
-            <div>
+            <div class="delevmes">
                 {{ message }}
             </div>
                 {{ form.search_date.label }}
@@ -15,19 +15,19 @@
             {% if data %}
 
                 {% for event in events %}
-                <div>
+                <div class="delevev">
                     {{ event.content }}
                     <input type="checkbox" name='checkbox' value="{{ event.id_event }}">
                 </div>
                 {% endfor %}
-
+                <div class="delevcon">
                 {{ form.submit(class="form-control", type='submit') }}
             {% else %}
                 {{ form.search_date.label }}
                 {{ form.search_date(class="form-control") }}
 
                 {{ form.submit(class="form-control", type='submit') }}
-
+                </div>
             {% endif %}
         {% endif %}
     </form>
