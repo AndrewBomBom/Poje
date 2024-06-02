@@ -3,7 +3,7 @@ from data import db_session
 from datetime import timedelta, datetime
 from flask_login import LoginManager, login_user, current_user, login_required, logout_user
 import re
-from flask import g
+
 
 
  
@@ -13,6 +13,7 @@ from flask import g
 from forms.RegForm import RegForm
 from forms.LogForm import LogForm
 from forms.DeleteForm import Detele_event
+
 from forms.AddEventForm import add_eventForm
 from forms.ConfirmUser import ConfirmUser
 
@@ -73,15 +74,33 @@ def starosta_lab():
 @app.route('/delete_event', methods=['GET', 'POST'])
 @login_required
 def detele_event():
-    form = Detele_event()
     db_sess = db_session.create_session()
-    if form.search_date.date:
-        ness_date = db_sess.query(Event.content).filter(Event.day_event == form.search_date.date).all()
+    form = Detele_event()
+    if form.validate_on_submit():
+        
+        
 
+        
+        events_this_day = db_sess.query(Event).filter(Event.day_event == form.search_date.data).all()
+        if events_this_day == []:
 
-    return render_template("DeteteEvent.html", form = form)
+            return render_template("DeteteEvent.html", form = form, message = 'В этот день нет событий')
+        else:
     
 
+            return render_template("DeteteEvent.html", form = form, data = form.search_date.data, events = events_this_day)
+       
+    if request.form.getlist('checkbox'):
+
+        for event_id in request.form.getlist('checkbox'):
+            event = db_sess.query(Event).filter(Event.id_event == event_id).first()
+            db_sess.delete(event)
+        db_sess.commit()
+        return redirect('/event_table')
+    return render_template("DeteteEvent.html", form = form)
+
+
+    
 
 @app.route('/event_table', methods=['GET', 'POST'])
 @login_required
