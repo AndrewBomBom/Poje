@@ -1,19 +1,13 @@
-from flask import Flask, render_template, redirect, abort, request
+from flask import Flask, render_template, redirect, request
 from data import db_session
 from datetime import timedelta, datetime
 from flask_login import LoginManager, login_user, current_user, login_required, logout_user
 import re
 
 
-
- 
-
-
-
 from forms.RegForm import RegForm
 from forms.LogForm import LogForm
 from forms.DeleteForm import Detele_event
-
 from forms.AddEventForm import add_eventForm
 from forms.ConfirmUser import ConfirmUser
 
@@ -77,11 +71,9 @@ def detele_event():
     db_sess = db_session.create_session()
     form = Detele_event()
     if form.validate_on_submit():
-        
-        
-
-        
+    
         events_this_day = db_sess.query(Event).filter(Event.day_event == form.search_date.data).all()
+        
         if events_this_day == []:
 
             return render_template("DeteteEvent.html", form = form, message = 'В этот день нет событий')
@@ -198,8 +190,6 @@ def main():
     app.run(debug=True)
 
     
-
-
 
 if __name__ == '__main__':
     main()
